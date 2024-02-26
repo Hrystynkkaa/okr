@@ -1,0 +1,103 @@
+/* Стилі для заголовка (HN) */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 24px; /* Розмір шрифта */
+    color: #333; /* Колір тексту */
+    font-weight: bold; /* Напівжирний шрифт */
+    line-height: 1.5; /* Міжрядковий інтервал */
+    text-align: center; /* Вирівнювання тексту */
+}
+
+/* Стилі для тіла (BODY) */
+body {
+    font-family: Arial, sans-serif; /* Шрифт */
+    font-size: 16px; /* Розмір шрифта */
+    color: #333; /* Колір тексту */
+    line-height: 1.6; /* Міжрядковий інтервал */
+    text-align: justify; /* Вирівнювання тексту */
+    background-color: #f0f0f0 !important; /* Фоновий колір */
+    background-size: cover; /* Збільшити зображення, щоб воно покривало весь екран */
+    background-repeat: no-repeat; /* Заборонити повторення зображення */
+}
+
+/* Стилі для посилань */
+a {
+    color: blue !important; /* Колір тексту посилань */
+}
+
+a:hover {
+    color: red !important; /* Колір тексту посилань при наведенні */
+    text-decoration: underline !important; /* Підкреслення посилань при наведенні */
+}
+
+/* Стиль рівня документу для посилань */
+:root {
+    --link-color: blue !important;
+    --link-hover-color: red !important;
+}
+
+a {
+    color: var(--link-color) !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: var(--link-hover-color) !important;
+    text-decoration: underline !important;
+}
+
+/* Внутрішній стиль для абзаців */
+p.special {
+    font-style: italic !important; /* Курсивний стиль */
+    font-weight: bold !important; /* Напівжирний шрифт */
+    font-size: 20px !important; /* Розмір шрифта */
+    color: green !important; /* Колір тексту */
+    text-align: center !important; /* Вирівнювання тексту */
+}
+
+/* Стилі для маркованих списків */
+ul {
+    list-style-type: disc; /* Тип маркування */
+    font-size: 16px; /* Розмір шрифта */
+    color: #333; /* Колір тексту */
+    margin-left: 20px; /* Зовнішній відступ зліва */
+}
+
+/* Стилі для нумерованих списків */
+ol {
+    list-style-type: decimal; /* Тип нумерації */
+    font-size: 16px; /* Розмір шрифта */
+    color: #333; /* Колір тексту */
+    margin-left: 20px; /* Зовнішній відступ зліва */
+}
+
+/* Стилі для списку з визначеннями */
+dl {
+    font-size: 16px; /* Розмір шрифта */
+    color: #333; /* Колір тексту */
+    margin-left: 20px; /* Зовнішній відступ зліва */
+}
+
+/* Стилі для таблиць */
+table {
+    width: 100%; /* Ширина таблиці */
+    border-collapse: collapse; /* Злиття рамок */
+    margin-bottom: 20px; /* Зовнішній відступ знизу */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Рамка */
+    padding: 8px; /* Внутрішні відступи */
+    text-align: left; /* Вирівнювання тексту */
+}
+
+th {
+    background-color: lightblue; /* Фон для заголовків стовпців */
+    font-size: 18px; /* Розмір шрифта */
+    color: #333; /* Колір тексту */
+    font-weight: bold; /* Напівжирний шрифт */
+}
+
+td {
+    font-size: 16px; /* Розмір шрифта */
+    color: #333; /* Колір тексту */
+}
