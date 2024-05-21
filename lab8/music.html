@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Тема Музика</title>
+</head>
+<body>
+<h2>Хочеш дізнатися хто виграв на Євробачені 2024?</h2>
+<button id="myButton">Дізнатися</button>
+
+<script>
+  const myButton = document.getElementById("myButton");
+
+  const eventHandler = {
+    handleEvent: function(event) {
+      alert("переможцем Євробачення 2024 став представник Швейцарії – співак Nemo. ");
+      // Видалення обробника події після виконання
+      event.currentTarget.removeEventListener("click", this);
+    }
+  };
+
+  myButton.addEventListener("click", eventHandler);
+
+  // Додамо ще обробники подій за допомогою addEventListener
+  function secondEventHandler() {
+    alert("Друге місце посів учасник з Хорватії Baby Lasagna");
+  }
+
+  function thirdEventHandler() {
+    alert("Українські співачки Alyona Alyona та Jerry Heil увійшли в трійку лідерів, та посіли третє місце");
+  }
+
+  myButton.addEventListener("click", secondEventHandler);
+  myButton.addEventListener("click", thirdEventHandler);
+</script>
+
+<!-- Гіперпосилання -->
+<p>Перейти на <a href="#table">таблицю</a> або
+  <a href="https://www.spotify.com/ua-uk/free/">спотіфай</a> або
+  <a href="contacts.html">сторінка фреймів</a></p>
+
+
+<!-- Картинки -->
+
+<a href="img.png" target="_blank"><img src="img.png" width="200" height="200" alt="Картинка"></a>
+<a href="img.png" target="_blank"><img src="img.png" width="200" height="200" alt="Картинка"></a>
+
+<!-- Списки -->
+<h2>ТОП 3 | Україна | 2024</h2>
+<ul id="myList">
+  <li type="I">Teresa & Maria. alyona alyona, Jerry Heil</li>
+  <li type="i">LaLaLa. YAKTAK</li>
+  <li type="circle">DREAMER. MELOVIN</li>
+</ul>
+
+<script>
+  const myList = document.getElementById("myList");
+
+  // Додаємо обробник кліку для списку ul
+  myList.addEventListener("click", function(event) {
+    const clickedElement = event.target;
+
+    // Перевіряємо, чи клікнуто на елемент списку
+    if (clickedElement.tagName === "LI") {
+      // Знімаємо підсвічування з усіх елементів списку
+      const listItems = myList.getElementsByTagName("li");
+      for (let item of listItems) {
+        item.classList.remove("active");
+      }
+
+      // Підсвічуємо клікнутий елемент
+      clickedElement.classList.add("active");
+    }
+  });
+</script>
+<h1>А які треки тобі найбільше подобаються?</h1>
+<div class="music-item" draggable="true">♫ Teresa&Maria.</div>
+<div class="music-item" draggable="true">♫ LaLaLa</div>
+<div class="music-item" draggable="true">♫ DREAMER</div>
+
+<div id="drop-zone">Перетягни трек сюди:)</div>
+
+<script src="script.js"></script>
+
+<!-- Таблиця -->
+<h2 id="table">Таблиця</h2>
+<table border="1">
+  <caption>Музична таблиця</caption>
+  <thead style="background-color: lightblue;">
+  <tr>
+    <th>Картинка</th>
+    <th>Гіперпосилання</th>
+    <th>Текст</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><img src="img_4.png" width="100" height="100" alt="Картинка 3"></td>
+    <td><a href="https://www.youtube.com/watch?v=lWA2pjMjpBs">youtube</a></td>
+    <td>Rihanna - Diamonds</td>
+  </tr>
+  <tr>
+    <td><img src="img_3.png" width="100" height="100" alt="Картинка 4"></td>
+    <td><a href="https://www.youtube.com/watch?v=uelHwf8o7_U">youtube</a></td>
+    <td>Eminem - Love The Way You Lie ft. Rihanna</td>
+  </tr>
+  <tr>
+    <td><img src="img_2.png" width="100" height="100" alt="Картинка 5"></td>
+    <td><a href="https://www.youtube.com/watch?v=EHkozMIXZ8w">youtube</a></td>
+    <td>Eminem ft. Rihanna - The Monster</td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Складна таблиця -->
+<h1>Музика</h1>
+<table cellspacing="10" cellpadding="5">
+  <caption>Таблиця жанрів музики</caption>
+  <colgroup>
+    <col span="2" style="background-color: #f0f0f0;">
+    <col span="2" style="background-color: #dcdcdc;">
+  </colgroup>
+  <thead>
+  <tr>
+    <th colspan="2">Жанр</th>
+    <th colspan="2">Інструменти</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td rowspan="2" class="genre">Класична</td>
+    <td>Бароко</td>
+    <td>Фортепіано</td>
+    <td rowspan="3">Струнні</td>
+  </tr>
+  <tr>
+    <td>Романтика</td>
+    <td>Скрипка</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="genre">Рок</td>
+    <td>Гітара</td>
+  </tr>
+  <tr>
+    <td>Джаз</td>
+    <td>Фанк</td>
+    <td colspan="2">Саксофон</td>
+  </tr>
+  </tbody>
+</table>
+<div id="actions">
+  <h3>Залишити відгук про сайт</h3>
+  <button data-action="praise">Поставити вподобайку</button>
+  <button data-action="review">Написати відгук</button>
+</div>
+
+<script>
+  // Клас, що відповідає за поведінку кнопок
+  class ButtonBehavior {
+    constructor(element) {
+      this.element = element;
+      this.element.addEventListener('click', this.handleClick.bind(this));
+    }
+
+    // Метод для похвали
+    praise() {
+      alert("Ви поставили вподобайку сайту)");
+    }
+
+    // Метод для написання відгуку
+    review() {
+      prompt("Ваш відгук:", "");
+    }
+
+    // Обробник кліку
+    handleClick(event) {
+      const action = event.target.dataset.action;
+      if (action && typeof this[action] === 'function') {
+        this[action](); // Викликаємо метод відповідно до дії
+      }
+    }
+  }
+
+  // Ініціалізація поведінки кнопок після завантаження DOM
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll('[data-action]'); // Знаходимо всі кнопки з атрибутом data-action
+    buttons.forEach(button => new ButtonBehavior(button)); // Ініціалізуємо для кожної кнопки об'єкт класу ButtonBehavior
+  });
+</script>
+</body>
+</html>
